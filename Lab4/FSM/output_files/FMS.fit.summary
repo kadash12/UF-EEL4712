@@ -1,0 +1,11 @@
+Fitter Status : Successful - Sat Oct 10 21:31:15 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : FMS
+Top-level Entity Name : top_level
+Family : MAX II
+Device : EPM2210F324C5
+Timing Models : Final
+Total logic elements : 117 / 2,210 ( 5 % )
+Total pins : 62 / 272 ( 23 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

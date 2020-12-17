@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+--Johnny Li
+--Lab2 Part 1 testbench
+--9/19/2020
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity decoder7seg_tb is
+end decoder7seg_tb;
+
+architecture TB of decoder7seg_tb is
+
+component decoder7seg
+	port(
+		input  : in  std_logic_vector(3 downto 0);
+		output : out std_logic_vector(6 downto 0)
+	);
+end component;

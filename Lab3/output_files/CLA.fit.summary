@@ -1,0 +1,11 @@
+Fitter Status : Successful - Tue Oct 06 18:55:17 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : CLA
+Top-level Entity Name : adder_top
+Family : MAX II
+Device : EPM2210F324C3
+Timing Models : Final
+Total logic elements : 16 / 2,210 ( < 1 % )
+Total pins : 26 / 272 ( 10 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

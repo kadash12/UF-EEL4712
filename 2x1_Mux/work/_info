@@ -1,0 +1,223 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Johnny Li/Desktop/QuartusDD/Mux_2x1
+Emux_2x1
+Z0 w1599667049
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux
+Z4 8C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_2x1_class.vhd
+Z5 FC:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_2x1_class.vhd
+l0
+L6
+VFMUK1:8MDD;OM_KYjZQez2
+!s100 80m?]MnEV<hF:Lmj4ki2@2
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1599695303
+!i10b 1
+Z8 !s108 1599695303.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_2x1_class.vhd|
+Z10 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_2x1_class.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Acase_statement
+R1
+R2
+Z13 DEx4 work 7 mux_2x1 0 22 FMUK1:8MDD;OM_KYjZQez2
+l53
+L52
+ViW5fK=FjEEga=ZMX^l0AX1
+!s100 L[aFf]zmA`S7N19]FcR]Q1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aif_statement
+R1
+R2
+R13
+l40
+L39
+VTJOR^AgeG:F@R@k0gU^`?1
+!s100 FikiI?>=9dkIS37<FL_lj3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Awhen_else
+R1
+R2
+R13
+l30
+L28
+V6_f>U6S37hTE`]z5a9QW32
+!s100 [92<<NL?Fj]36;gnGW^>P0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Awith_select
+R1
+R2
+R13
+l19
+L16
+VmE0D`b^eNfSHB9K8I^2cd1
+!s100 D9on=zHcSi7CD68Ek@lQ>0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aarch1
+R1
+R2
+R13
+l19
+L16
+V2N?eAY45oYoFEiI03>]>S2
+!s100 GUjlYe:]N;1hBgLaWO4Vf0
+R6
+32
+!s110 1599666735
+!i10b 1
+!s108 1599666734.000000
+R9
+R10
+!i113 1
+R11
+R12
+w1599238253
+Emux_2x1_tb
+Z14 w1599230510
+Z15 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z16 8C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_2x1_tb.vhd
+Z17 FC:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_2x1_tb.vhd
+l0
+L9
+Vc152@OVAXn;_zQW[:h:C;1
+!s100 Ok[gklY]PjCi=_J:MmU>z0
+R6
+32
+Z18 !s110 1599695304
+!i10b 1
+R8
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_2x1_tb.vhd|
+Z20 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_2x1_tb.vhd|
+!i113 1
+R11
+R12
+Atb
+R13
+R15
+R1
+R2
+DEx4 work 10 mux_2x1_tb 0 22 c152@OVAXn;_zQW[:h:C;1
+l31
+L13
+V2h9<0dML6NkIK^NcibW;20
+!s100 bMBJOkjodf634lMl9E;<]1
+R6
+32
+R18
+!i10b 1
+R8
+R19
+R20
+!i113 1
+R11
+R12
+Emux_4x1
+Z21 w1599695603
+R1
+R2
+R3
+Z22 8C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_4x1_class.vhd
+Z23 FC:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_4x1_class.vhd
+l0
+L4
+V6BQjPem[^I5jY92UET9Kk1
+!s100 mOM<C8iGz<YioT6dbkH=Y3
+R6
+32
+Z24 !s110 1599695607
+!i10b 1
+Z25 !s108 1599695607.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_4x1_class.vhd|
+Z27 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_4x1_class.vhd|
+!i113 1
+R11
+R12
+Astr2
+R13
+R1
+R2
+Z28 DEx4 work 7 mux_4x1 0 22 6BQjPem[^I5jY92UET9Kk1
+l37
+L34
+VknY5m1=TN^]aELC5`=Ao52
+!s100 S:kMUQTFaaNZ0X^^e2<]V0
+R6
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R11
+R12
+Astr
+R1
+R2
+R28
+l23
+L12
+Z29 VQ16Wl5LA@Q][gFhP;2nhC3
+Z30 !s100 V;1]iI>DJEV;FhAnJFkSJ3
+R6
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R11
+R12

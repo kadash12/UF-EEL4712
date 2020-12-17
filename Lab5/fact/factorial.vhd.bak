@@ -1,0 +1,113 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity factorial is
+  generic(
+    WIDTH         :   positive := 32);
+  port(
+    clk     : in  std_logic;
+    rst     : in  std_logic;
+    n       : in  std_logic_vector(width-1 downto 0);
+    go      : in  std_logic;
+    done    : out std_logic;
+    output  : out std_logic_vector(WIDTH-1 downto 0)
+
+  );
+end factorial;
+
+
+architecture FSM_D of factorial is
+
+  -- Fill in with your code
+  type state_type is (state0, state1, state2, state3, state4);
+  signal state	: state_type;
+
+begin 
+  
+   -- Fill in with your code
+	process(clk, rst, go)
+	variable tempFact :Integer;
+	variable regN : Integer;
+	
+	begin
+	
+		if (rst = '1') then
+			state  <= state0;
+			done   <= '0';
+			output <= std_logic_vector(to_unsigned(1,WIDTH));
+			tempFact := 0;
+			
+		elsif (rising_edge(clk)) then
+			case state is
+				when state0 =>		--After being reset, the circuit should wait until go becomes 1 (active high)
+					if (go = '1') then
+						state <= state1;
+						done <= '0';
+					end if;
+					
+				when state1 =>		--Load input into a register
+					tempFact := 1;
+					regN := to_integer(unsigned(n));
+					state <= state2;
+					
+				when state2 =>		--Compute the factorial 
+					for i in 0 to regN-1 loop
+						tempFact := tempFact * regN;
+						regN :=regN-1;
+					end loop;
+					state <= state3;
+					
+				when state3 =>		--assign "output" and assert done
+					output <= std_logic_vector(to_unsigned(tempFact, width));
+					done <= '1';
+					state <= state4;
+				
+				when state4 =>		--make sure go has been cleared before starting the program again
+					if go = '0' then
+						state <= state0;
+					end if;
+					
+				when others =>
+					null;
+					
+			end case;
+		end if;
+	end process;
+end FSM_D;
+
+architecture FSM_D1 of factorial is
+	
+	signal n_ge_1, regN_sel, regN_en, output_en, tempFact_sel, tempFact_en : std_logic;
+
+begin  -- FSM_D1
+	
+	U_CT: entity work.ctrl1
+	port map(
+		clk => clk,
+		go => go,
+		rst => rst,
+		n_ge_1 => n_ge_1,
+		regN_sel => regN_sel,
+		regN_en => regN_en,
+		output_en => output_en,
+		tempFact_sel => tempFact_sel,
+		tempFact_en => tempFact_en,
+		output_en => output_en,
+		done => done);
+	
+	U_DP: entity work.datapath1 
+	generic map (WIDTH)
+	port map(
+		clk => clk,
+		rst => rst,
+		n => n,
+		n_ge_1 => n_ge_1,
+		tempFact_sel => tempFact_sel,
+		regN_sel => regN_sel,
+		regN_en => regN_en,
+		tempFact_en => tempFact_en,
+		output_en => output_en,
+		output => output);
+
+end FSM_D1;

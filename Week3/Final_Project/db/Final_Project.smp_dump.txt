@@ -1,0 +1,20 @@
+
+State Machine - |top_level|mips:U_MIPS|controller:U_CTRL|state
+Name state.HALT state.JUMP_REG state.JUMP state.WRITE_RETURN_ADDR state.BRANCH state.MEMORY_READ_COMPLETION state.LOAD_MEMORY state.MEMORY_WRITE state.MEMORY_READ state.MEMORY_ADDRESS state.I_TYPE_COMPLETION state.R_TYPE_COMPLETION state.I_TYPE state.R_TYPE state.DECODE state.LOAD state.FETCH 
+state.FETCH 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.LOAD 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.DECODE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.R_TYPE 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.I_TYPE 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.R_TYPE_COMPLETION 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.I_TYPE_COMPLETION 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.MEMORY_ADDRESS 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.MEMORY_READ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.MEMORY_WRITE 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.LOAD_MEMORY 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.MEMORY_READ_COMPLETION 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.BRANCH 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WRITE_RETURN_ADDR 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.JUMP 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.JUMP_REG 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.HALT 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

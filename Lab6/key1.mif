@@ -1,0 +1,12 @@
+DEPTH=1; -- THe size of memory in words
+WIDTH=64;  --The size of data in bits
+ADDRESS_RADIX = HEX; --The radix for address values
+DATA_RADIX = HEX; --The radix for data values
+
+CONTENT
+BEGIN
+0 : 1a9a032b04f39625;
+
+
+END;
+

@@ -1,0 +1,3 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,factorial:U_FACT|datapath1:U_DP|mult:U_MULT|lpm_mult:Mult0|mult_tns:auto_generated|mac_out2,
+PORT_SWAPPING,PORT_SWAPPING_FINISHED,factorial:U_FACT|datapath1:U_DP|mult:U_MULT|lpm_mult:Mult0|mult_tns:auto_generated|mac_mult1,

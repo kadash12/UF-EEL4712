@@ -1,0 +1,1254 @@
+Analysis & Synthesis report for simon
+Mon Nov 09 23:18:19 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis IP Cores Summary
+  6. State Machine - |top_level|simon_top:U_SIMON_top|controller:U_CONTL|state
+  7. User-Specified and Inferred Latches
+  8. Multiplexer Restructuring Statistics (Restructuring Performed)
+  9. Source assignments for simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|altsyncram_vct2:altsyncram1
+ 10. Source assignments for simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated|altsyncram_ldq2:altsyncram1
+ 11. Source assignments for simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated
+ 12. Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|simon:U_SIMON|mux4to1:U_MUX_x
+ 13. Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|simon:U_SIMON|mux4to1:U_MUX_y
+ 14. Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|simon:U_SIMON|reg:U_REG_regx
+ 15. Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|simon:U_SIMON|reg:U_REG_regy
+ 16. Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|simon:U_SIMON|reg:U_REG_regk
+ 17. Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component
+ 18. Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component
+ 19. Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "decoder7seg:U_LED0"
+ 22. Port Connectivity Checks: "decoder7seg:U_LED1"
+ 23. Port Connectivity Checks: "decoder7seg:U_LED2"
+ 24. Port Connectivity Checks: "decoder7seg:U_LED3"
+ 25. Port Connectivity Checks: "decoder7seg:U_LED4"
+ 26. Port Connectivity Checks: "decoder7seg:U_LED5"
+ 27. Port Connectivity Checks: "simon_top:U_SIMON_top|outram:U_OUT_RAM"
+ 28. Port Connectivity Checks: "simon_top:U_SIMON_top|inram:U_IN_RAM"
+ 29. Port Connectivity Checks: "simon_top:U_SIMON_top|keyrom:U_ROM"
+ 30. Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|reg:U_REG_regk"
+ 31. Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:11:U_REG_keyexpand"
+ 32. Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:10:U_REG_keyexpand"
+ 33. Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:9:U_REG_keyexpand"
+ 34. Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:8:U_REG_keyexpand"
+ 35. Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:7:U_REG_keyexpand"
+ 36. Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:6:U_REG_keyexpand"
+ 37. Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:5:U_REG_keyexpand"
+ 38. Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:4:U_REG_keyexpand"
+ 39. In-System Memory Content Editor Settings
+ 40. Post-Synthesis Netlist Statistics for Top Partition
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Nov 09 23:18:13 2020       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; simon                                       ;
+; Top-level Entity Name              ; top_level                                   ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; 10M50DAF484C6GES   ;                    ;
+; Top-level entity name                                                      ; top_level          ; simon              ;
+; Family name                                                                ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                                                                                                            ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                                                                                                                                                                                                                ; IP Include File ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                 ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                             ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_presplit:presplit   ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_splitter:splitter   ;                 ;
+; Altera ; RAM: 1-PORT  ; 17.1    ; N/A          ; N/A          ; |top_level|simon_top:U_SIMON_top|inram:U_IN_RAM                                                                                                                                                                                                                                ; inram.vhd       ;
+; Altera ; RAM: 1-PORT  ; 17.1    ; N/A          ; N/A          ; |top_level|simon_top:U_SIMON_top|outram:U_OUT_RAM                                                                                                                                                                                                                              ; outram.vhd      ;
+; Altera ; ROM: 1-PORT  ; 17.1    ; N/A          ; N/A          ; |top_level|simon_top:U_SIMON_top|keyrom:U_ROM                                                                                                                                                                                                                                  ; keyrom.vhd      ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|simon_top:U_SIMON_top|controller:U_CONTL|state                                                            ;
++--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; Name         ; state.state5 ; state.state4 ; state.stated ; state.statec ; state.state3 ; state.state2 ; state.state1 ; state.state0 ;
++--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; state.state0 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; state.state1 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 1            ;
+; state.state2 ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 1            ;
+; state.state3 ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 1            ;
+; state.statec ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 1            ;
+; state.stated ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state.state4 ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state.state5 ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
++--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                      ;
++---------------------------------------------------------+-------------------------------------------------------+------------------------+
+; Latch Name                                              ; Latch Enable Signal                                   ; Free of Timing Hazards ;
++---------------------------------------------------------+-------------------------------------------------------+------------------------+
+; simon_top:U_SIMON_top|controller:U_CONTL|round[0]       ; simon_top:U_SIMON_top|controller:U_CONTL|WideOr6      ; yes                    ;
+; simon_top:U_SIMON_top|controller:U_CONTL|round[1]       ; simon_top:U_SIMON_top|controller:U_CONTL|WideOr6      ; yes                    ;
+; simon_top:U_SIMON_top|controller:U_CONTL|round[2]       ; simon_top:U_SIMON_top|controller:U_CONTL|WideOr6      ; yes                    ;
+; simon_top:U_SIMON_top|controller:U_CONTL|round[3]       ; simon_top:U_SIMON_top|controller:U_CONTL|WideOr6      ; yes                    ;
+; simon_top:U_SIMON_top|controller:U_CONTL|round[4]       ; simon_top:U_SIMON_top|controller:U_CONTL|WideOr6      ; yes                    ;
+; simon_top:U_SIMON_top|controller:U_CONTL|round_count[3] ; simon_top:U_SIMON_top|controller:U_CONTL|state.state3 ; yes                    ;
+; simon_top:U_SIMON_top|controller:U_CONTL|round_count[2] ; simon_top:U_SIMON_top|controller:U_CONTL|state.state3 ; yes                    ;
+; simon_top:U_SIMON_top|controller:U_CONTL|round_count[1] ; simon_top:U_SIMON_top|controller:U_CONTL|state.state3 ; yes                    ;
+; simon_top:U_SIMON_top|controller:U_CONTL|round_count[0] ; simon_top:U_SIMON_top|controller:U_CONTL|state.state3 ; yes                    ;
+; Number of user-specified and inferred latches = 9       ;                                                       ;                        ;
++---------------------------------------------------------+-------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top_level|simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[6]                                          ;
+; 3:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |top_level|simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[15]                                                    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_level|simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[5]                                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_level|simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[1]                                                   ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_level|simon_top:U_SIMON_top|simon:U_SIMON|reg:U_REG_regx|output[15]                                                                                                                                       ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_level|simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_level|simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[3]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_level|simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[3] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_level|simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[2]      ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |top_level|simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[1]        ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 14 LEs               ; 10 LEs                 ; Yes        ; |top_level|simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]      ;
+; 13:1               ; 16 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |top_level|simon_top:U_SIMON_top|simon:U_SIMON|Mux15                                                                                                                                                           ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top_level|simon_top:U_SIMON_top|controller:U_CONTL|Selector7                                                                                                                                                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top_level|simon_top:U_SIMON_top|controller:U_CONTL|Selector2                                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|altsyncram_vct2:altsyncram1 ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                     ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                      ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated|altsyncram_ldq2:altsyncram1 ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                       ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                        ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                             ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                              ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|simon:U_SIMON|mux4to1:U_MUX_x ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|simon:U_SIMON|mux4to1:U_MUX_y ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|simon:U_SIMON|reg:U_REG_regx ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|simon:U_SIMON|reg:U_REG_regy ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|simon:U_SIMON|reg:U_REG_regk ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; width          ; 64    ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                ;
++------------------------------------+----------------------+-----------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                             ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                      ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                             ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                             ;
+; WIDTH_A                            ; 64                   ; Signed Integer                                      ;
+; WIDTHAD_A                          ; 1                    ; Signed Integer                                      ;
+; NUMWORDS_A                         ; 1                    ; Signed Integer                                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                             ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                             ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                             ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                             ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                             ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                             ;
+; WIDTH_B                            ; 1                    ; Signed Integer                                      ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                                      ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                             ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                             ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                             ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                             ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                             ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                             ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                             ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                             ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                             ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                             ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                             ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                             ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                             ;
+; INIT_FILE                          ; ../key.mif           ; Untyped                                             ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                             ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                      ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                             ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                             ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                             ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                      ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                                             ;
+; CBXI_PARAMETER                     ; altsyncram_b1t3      ; Untyped                                             ;
++------------------------------------+----------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                  ;
++------------------------------------+----------------------+-------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                               ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                        ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                               ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                               ;
+; WIDTH_A                            ; 32                   ; Signed Integer                                        ;
+; WIDTHAD_A                          ; 5                    ; Signed Integer                                        ;
+; NUMWORDS_A                         ; 32                   ; Signed Integer                                        ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                               ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                               ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                               ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                               ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                               ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                               ;
+; WIDTH_B                            ; 1                    ; Signed Integer                                        ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                                        ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                               ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                               ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                               ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                               ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                               ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                               ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                               ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                               ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                               ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                               ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                               ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                               ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                        ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                               ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                               ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                               ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                               ;
+; INIT_FILE                          ; ../in.mif            ; Untyped                                               ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                               ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                               ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                               ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                               ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                               ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                               ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                               ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                               ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                               ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                        ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                                               ;
+; CBXI_PARAMETER                     ; altsyncram_23t3      ; Untyped                                               ;
++------------------------------------+----------------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                    ;
++------------------------------------+----------------------+---------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                 ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                                 ;
+; WIDTH_A                            ; 32                   ; Signed Integer                                          ;
+; WIDTHAD_A                          ; 5                    ; Signed Integer                                          ;
+; NUMWORDS_A                         ; 32                   ; Signed Integer                                          ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; WIDTH_B                            ; 1                    ; Signed Integer                                          ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                                          ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                                          ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                 ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                          ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                          ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                                                 ;
+; CBXI_PARAMETER                     ; altsyncram_89p3      ; Untyped                                                 ;
++------------------------------------+----------------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                   ;
++-------------------------------------------+------------------------------------------------------------------------+
+; Name                                      ; Value                                                                  ;
++-------------------------------------------+------------------------------------------------------------------------+
+; Number of entity instances                ; 3                                                                      ;
+; Entity Instance                           ; simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component     ;
+;     -- OPERATION_MODE                     ; ROM                                                                    ;
+;     -- WIDTH_A                            ; 64                                                                     ;
+;     -- NUMWORDS_A                         ; 1                                                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                           ;
+;     -- WIDTH_B                            ; 1                                                                      ;
+;     -- NUMWORDS_B                         ; 0                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                              ;
+; Entity Instance                           ; simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component   ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                            ;
+;     -- WIDTH_A                            ; 32                                                                     ;
+;     -- NUMWORDS_A                         ; 32                                                                     ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                           ;
+;     -- WIDTH_B                            ; 1                                                                      ;
+;     -- NUMWORDS_B                         ; 0                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                              ;
+; Entity Instance                           ; simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                            ;
+;     -- WIDTH_A                            ; 32                                                                     ;
+;     -- NUMWORDS_A                         ; 32                                                                     ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                           ;
+;     -- WIDTH_B                            ; 1                                                                      ;
+;     -- NUMWORDS_B                         ; 0                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                              ;
++-------------------------------------------+------------------------------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "decoder7seg:U_LED0" ;
++-------------+-------+----------+---------------+
+; Port        ; Type  ; Severity ; Details       ;
++-------------+-------+----------+---------------+
+; input[3..1] ; Input ; Info     ; Stuck at GND  ;
++-------------+-------+----------+---------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "decoder7seg:U_LED1" ;
++-------------+-------+----------+---------------+
+; Port        ; Type  ; Severity ; Details       ;
++-------------+-------+----------+---------------+
+; input[3..1] ; Input ; Info     ; Stuck at GND  ;
++-------------+-------+----------+---------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "decoder7seg:U_LED2" ;
++-------+-------+----------+---------------------+
+; Port  ; Type  ; Severity ; Details             ;
++-------+-------+----------+---------------------+
+; input ; Input ; Info     ; Stuck at GND        ;
++-------+-------+----------+---------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "decoder7seg:U_LED3" ;
++-------+-------+----------+---------------------+
+; Port  ; Type  ; Severity ; Details             ;
++-------+-------+----------+---------------------+
+; input ; Input ; Info     ; Stuck at GND        ;
++-------+-------+----------+---------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "decoder7seg:U_LED4" ;
++-------+-------+----------+---------------------+
+; Port  ; Type  ; Severity ; Details             ;
++-------+-------+----------+---------------------+
+; input ; Input ; Info     ; Stuck at GND        ;
++-------+-------+----------+---------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "decoder7seg:U_LED5" ;
++-------+-------+----------+---------------------+
+; Port  ; Type  ; Severity ; Details             ;
++-------+-------+----------+---------------------+
+; input ; Input ; Info     ; Stuck at GND        ;
++-------+-------+----------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simon_top:U_SIMON_top|outram:U_OUT_RAM"                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "simon_top:U_SIMON_top|inram:U_IN_RAM" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; data ; Input ; Info     ; Stuck at GND                           ;
+; wren ; Input ; Info     ; Stuck at GND                           ;
++------+-------+----------+----------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "simon_top:U_SIMON_top|keyrom:U_ROM" ;
++---------+-------+----------+-----------------------------------+
+; Port    ; Type  ; Severity ; Details                           ;
++---------+-------+----------+-----------------------------------+
+; address ; Input ; Info     ; Stuck at GND                      ;
++---------+-------+----------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|reg:U_REG_regk"                                   ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:11:U_REG_keyexpand" ;
++-------------------+-------+----------+---------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                   ;
++-------------------+-------+----------+---------------------------------------------------------------------------+
+; round_count[1..0] ; Input ; Info     ; Stuck at VCC                                                              ;
+; round_count[4]    ; Input ; Info     ; Stuck at GND                                                              ;
+; round_count[3]    ; Input ; Info     ; Stuck at VCC                                                              ;
+; round_count[2]    ; Input ; Info     ; Stuck at GND                                                              ;
++-------------------+-------+----------+---------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:10:U_REG_keyexpand" ;
++----------------+-------+----------+------------------------------------------------------------------------------+
+; Port           ; Type  ; Severity ; Details                                                                      ;
++----------------+-------+----------+------------------------------------------------------------------------------+
+; round_count[4] ; Input ; Info     ; Stuck at GND                                                                 ;
+; round_count[3] ; Input ; Info     ; Stuck at VCC                                                                 ;
+; round_count[2] ; Input ; Info     ; Stuck at GND                                                                 ;
+; round_count[1] ; Input ; Info     ; Stuck at VCC                                                                 ;
+; round_count[0] ; Input ; Info     ; Stuck at GND                                                                 ;
++----------------+-------+----------+------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:9:U_REG_keyexpand" ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                  ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+; round_count[2..1] ; Input ; Info     ; Stuck at GND                                                             ;
+; round_count[4]    ; Input ; Info     ; Stuck at GND                                                             ;
+; round_count[3]    ; Input ; Info     ; Stuck at VCC                                                             ;
+; round_count[0]    ; Input ; Info     ; Stuck at VCC                                                             ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:8:U_REG_keyexpand" ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                  ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+; round_count[2..0] ; Input ; Info     ; Stuck at GND                                                             ;
+; round_count[4]    ; Input ; Info     ; Stuck at GND                                                             ;
+; round_count[3]    ; Input ; Info     ; Stuck at VCC                                                             ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:7:U_REG_keyexpand" ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                  ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+; round_count[2..0] ; Input ; Info     ; Stuck at VCC                                                             ;
+; round_count[4..3] ; Input ; Info     ; Stuck at GND                                                             ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:6:U_REG_keyexpand" ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                  ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+; round_count[2..1] ; Input ; Info     ; Stuck at VCC                                                             ;
+; round_count[4..3] ; Input ; Info     ; Stuck at GND                                                             ;
+; round_count[0]    ; Input ; Info     ; Stuck at GND                                                             ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:5:U_REG_keyexpand" ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                  ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+; round_count[4..3] ; Input ; Info     ; Stuck at GND                                                             ;
+; round_count[2]    ; Input ; Info     ; Stuck at VCC                                                             ;
+; round_count[1]    ; Input ; Info     ; Stuck at GND                                                             ;
+; round_count[0]    ; Input ; Info     ; Stuck at VCC                                                             ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:4:U_REG_keyexpand" ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                  ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+; round_count[4..3] ; Input ; Info     ; Stuck at GND                                                             ;
+; round_count[1..0] ; Input ; Info     ; Stuck at GND                                                             ;
+; round_count[2]    ; Input ; Info     ; Stuck at VCC                                                             ;
++-------------------+-------+----------+--------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; In-System Memory Content Editor Settings                                                                                                                        ;
++----------------+-------------+-------+-------+------------+-----------------------------------------------------------------------------------------------------+
+; Instance Index ; Instance ID ; Width ; Depth ; Mode       ; Hierarchy Location                                                                                  ;
++----------------+-------------+-------+-------+------------+-----------------------------------------------------------------------------------------------------+
+; 0              ; NONE        ; 64    ; 1     ; Read/Write ; simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated   ;
+; 1              ; NONE        ; 32    ; 32    ; Read/Write ; simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated ;
++----------------+-------------+-------+-------+------------+-----------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 148                         ;
+; cycloneiii_ff         ; 186                         ;
+;     CLR               ; 27                          ;
+;     ENA               ; 111                         ;
+;     ENA CLR           ; 26                          ;
+;     ENA CLR SLD       ; 21                          ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 960                         ;
+;     arith             ; 23                          ;
+;         2 data inputs ; 23                          ;
+;     normal            ; 937                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 75                          ;
+;         3 data inputs ; 231                         ;
+;         4 data inputs ; 624                         ;
+; cycloneiii_ram_block  ; 96                          ;
+;                       ;                             ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 5.01                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:15     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Mon Nov 09 23:15:26 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simon -c simon
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file de10_lite_golden_top.v
+    Info (12023): Found entity 1: DE10_LITE_Golden_Top File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/DE10_LITE_Golden_Top.v Line: 29
+Info (12021): Found 1 design units, including 0 entities, in source file constants.vhd
+    Info (12022): Found design unit 1: constants File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/constants.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
+    Info (12022): Found design unit 1: controller-FSM2P File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 27
+    Info (12023): Found entity 1: controller File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file countere.vhd
+    Info (12022): Found design unit 1: CounterE-Behavioral File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/counterE.vhd Line: 14
+    Info (12023): Found entity 1: CounterE File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/counterE.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file decoder7seg.vhd
+    Info (12022): Found design unit 1: decoder7seg-BHV File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/decoder7seg.vhd Line: 10
+    Info (12023): Found entity 1: decoder7seg File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/decoder7seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux4to1.vhd
+    Info (12022): Found design unit 1: mux4to1-Dataflow File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/mux4to1.vhd Line: 14
+    Info (12023): Found entity 1: mux4to1 File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/mux4to1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file simon.vhd
+    Info (12022): Found design unit 1: simon-datapath File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon.vhd Line: 21
+    Info (12023): Found entity 1: simon File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file simon_top.vhd
+    Info (12022): Found design unit 1: simon_top-STR File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon_top.vhd Line: 19
+    Info (12023): Found entity 1: simon_top File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon_top.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file key_expansion.vhd
+    Info (12022): Found design unit 1: key_expansion-BHV File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/key_expansion.vhd Line: 18
+    Info (12023): Found entity 1: key_expansion File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/key_expansion.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file reg.vhd
+    Info (12022): Found design unit 1: reg-BHV File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/reg.vhd Line: 19
+    Info (12023): Found entity 1: reg File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/reg.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file round.vhd
+    Info (12022): Found design unit 1: round-BHV File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/round.vhd Line: 19
+    Info (12023): Found entity 1: round File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/round.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
+    Info (12022): Found design unit 1: top_level-STR File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 28
+    Info (12023): Found entity 1: top_level File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file keyrom.vhd
+    Info (12022): Found design unit 1: keyrom-SYN File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/keyrom.vhd Line: 52
+    Info (12023): Found entity 1: keyrom File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/keyrom.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file inram.vhd
+    Info (12022): Found design unit 1: inram-SYN File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/inram.vhd Line: 54
+    Info (12023): Found entity 1: inram File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/inram.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file outram.vhd
+    Info (12022): Found design unit 1: outram-SYN File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/outram.vhd Line: 54
+    Info (12023): Found entity 1: outram File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/outram.vhd Line: 42
+Info (12127): Elaborating entity "top_level" for the top level hierarchy
+Info (12128): Elaborating entity "simon_top" for hierarchy "simon_top:U_SIMON_top" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 44
+Info (12128): Elaborating entity "simon" for hierarchy "simon_top:U_SIMON_top|simon:U_SIMON" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon_top.vhd Line: 33
+Warning (10036): Verilog HDL or VHDL warning at simon.vhd(32): object "kreg_out" assigned a value but never read File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon.vhd Line: 32
+Warning (10873): Using initial value X (don't care) for net "round_key[12]" at simon.vhd(26) File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon.vhd Line: 26
+Info (12128): Elaborating entity "key_expansion" for hierarchy "simon_top:U_SIMON_top|simon:U_SIMON|key_expansion:\GEN_ROUND_KEYS:4:U_REG_keyexpand" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon.vhd Line: 55
+Info (12128): Elaborating entity "mux4to1" for hierarchy "simon_top:U_SIMON_top|simon:U_SIMON|mux4to1:U_MUX_x" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon.vhd Line: 63
+Info (12128): Elaborating entity "reg" for hierarchy "simon_top:U_SIMON_top|simon:U_SIMON|reg:U_REG_regx" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon.vhd Line: 81
+Info (12128): Elaborating entity "reg" for hierarchy "simon_top:U_SIMON_top|simon:U_SIMON|reg:U_REG_regk" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon.vhd Line: 99
+Info (12128): Elaborating entity "round" for hierarchy "simon_top:U_SIMON_top|simon:U_SIMON|round:U_REG_rounding" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon.vhd Line: 111
+Info (12128): Elaborating entity "controller" for hierarchy "simon_top:U_SIMON_top|controller:U_CONTL" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon_top.vhd Line: 48
+Warning (10492): VHDL Process Statement warning at controller.vhd(79): signal "round" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at controller.vhd(82): signal "round" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at controller.vhd(91): signal "round" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at controller.vhd(92): signal "round" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at controller.vhd(106): signal "addr_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 106
+Warning (10631): VHDL Process Statement warning at controller.vhd(44): inferring latch(es) for signal or variable "round", which holds its previous value in one or more paths through the process File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at controller.vhd(44): inferring latch(es) for signal or variable "round_count", which holds its previous value in one or more paths through the process File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+Info (10041): Inferred latch for "round_count[0]" at controller.vhd(44) File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+Info (10041): Inferred latch for "round_count[1]" at controller.vhd(44) File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+Info (10041): Inferred latch for "round_count[2]" at controller.vhd(44) File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+Info (10041): Inferred latch for "round_count[3]" at controller.vhd(44) File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+Info (10041): Inferred latch for "round_count[4]" at controller.vhd(44) File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+Info (10041): Inferred latch for "round[0]" at controller.vhd(44) File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+Info (10041): Inferred latch for "round[1]" at controller.vhd(44) File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+Info (10041): Inferred latch for "round[2]" at controller.vhd(44) File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+Info (10041): Inferred latch for "round[3]" at controller.vhd(44) File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+Info (10041): Inferred latch for "round[4]" at controller.vhd(44) File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+Info (12128): Elaborating entity "keyrom" for hierarchy "simon_top:U_SIMON_top|keyrom:U_ROM" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon_top.vhd Line: 65
+Info (12128): Elaborating entity "altsyncram" for hierarchy "simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/keyrom.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/keyrom.vhd Line: 59
+Info (12133): Instantiated megafunction "simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/keyrom.vhd Line: 59
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "../key.mif"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "1"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "64"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "1"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=NONE"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_b1t3.tdf
+    Info (12023): Found entity 1: altsyncram_b1t3 File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_b1t3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_b1t3" for hierarchy "simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vct2.tdf
+    Info (12023): Found entity 1: altsyncram_vct2 File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_vct2" for hierarchy "simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|altsyncram_vct2:altsyncram1" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_b1t3.tdf Line: 34
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_b1t3.tdf Line: 35
+Info (12130): Elaborated megafunction instantiation "simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_b1t3.tdf Line: 35
+Info (12133): Instantiated megafunction "simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_b1t3.tdf Line: 35
+    Info (12134): Parameter "CVALUE" = "0000000000000000000000000000000000000000000000000000000000000000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
+    Info (12134): Parameter "IS_READABLE" = "1"
+    Info (12134): Parameter "NODE_NAME" = "0"
+    Info (12134): Parameter "NUMWORDS" = "1"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "7"
+    Info (12134): Parameter "WIDTH_WORD" = "64"
+    Info (12134): Parameter "WIDTHAD" = "1"
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "simon_top:U_SIMON_top|keyrom:U_ROM|altsyncram:altsyncram_component|altsyncram_b1t3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 799
+Info (12128): Elaborating entity "inram" for hierarchy "simon_top:U_SIMON_top|inram:U_IN_RAM" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon_top.vhd Line: 72
+Info (12128): Elaborating entity "altsyncram" for hierarchy "simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/inram.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/inram.vhd Line: 61
+Info (12133): Instantiated megafunction "simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/inram.vhd Line: 61
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "../in.mif"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "32"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "5"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=NONE"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_23t3.tdf
+    Info (12023): Found entity 1: altsyncram_23t3 File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_23t3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_23t3" for hierarchy "simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ldq2.tdf
+    Info (12023): Found entity 1: altsyncram_ldq2 File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_ldq2" for hierarchy "simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated|altsyncram_ldq2:altsyncram1" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_23t3.tdf Line: 36
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_23t3.tdf Line: 37
+Info (12130): Elaborated megafunction instantiation "simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_23t3.tdf Line: 37
+Info (12133): Instantiated megafunction "simon_top:U_SIMON_top|inram:U_IN_RAM|altsyncram:altsyncram_component|altsyncram_23t3:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_23t3.tdf Line: 37
+    Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
+    Info (12134): Parameter "IS_READABLE" = "1"
+    Info (12134): Parameter "NODE_NAME" = "0"
+    Info (12134): Parameter "NUMWORDS" = "32"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "6"
+    Info (12134): Parameter "WIDTH_WORD" = "32"
+    Info (12134): Parameter "WIDTHAD" = "5"
+Info (12128): Elaborating entity "outram" for hierarchy "simon_top:U_SIMON_top|outram:U_OUT_RAM" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon_top.vhd Line: 81
+Info (12128): Elaborating entity "altsyncram" for hierarchy "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/outram.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/outram.vhd Line: 61
+Info (12133): Instantiated megafunction "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/outram.vhd Line: 61
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "32"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "5"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_89p3.tdf
+    Info (12023): Found entity 1: altsyncram_89p3 File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_89p3" for hierarchy "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "CounterE" for hierarchy "simon_top:U_SIMON_top|CounterE:U_inaddr_gen" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/simon_top.vhd Line: 90
+Warning (10492): VHDL Process Statement warning at counterE.vhd(21): signal "Reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/counterE.vhd Line: 21
+Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED5" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 52
+Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
+Info (11172): 2020.11.09.23:17:07 Progress: Loading sld2032f0e5/alt_sld_fab_wrapper_hw.tcl
+Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
+Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
+Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
+Info (11172): Presplit: "alt_sld_fab" instantiated altera_super_splitter "presplit"
+Info (11172): Splitter: "alt_sld_fab" instantiated altera_sld_splitter "splitter"
+Info (11172): Sldfabric: "alt_sld_fab" instantiated altera_sld_jtag_hub "sldfabric"
+Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification_hub "ident"
+Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
+Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld2032f0e5/alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/ip/sld2032f0e5/alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld2032f0e5/submodules/alt_sld_fab_alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/ip/sld2032f0e5/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld2032f0e5/submodules/alt_sld_fab_alt_sld_fab_ident.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/ip/sld2032f0e5/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld2032f0e5/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/ip/sld2032f0e5/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld2032f0e5/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/ip/sld2032f0e5/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 142
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/ip/sld2032f0e5/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld2032f0e5/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/ip/sld2032f0e5/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[0]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 36
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[1]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 58
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[2]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 80
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[3]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 102
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[4]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 124
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[5]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 146
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[6]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 168
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[7]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 190
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[8]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 212
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[9]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 234
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[10]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 256
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[11]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 278
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[12]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 300
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[13]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 322
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[14]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 344
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[15]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 366
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[16]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 388
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[17]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 410
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[18]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 432
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[19]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 454
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[20]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 476
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[21]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 498
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[22]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 520
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[23]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 542
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[24]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 564
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[25]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 586
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[26]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 608
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[27]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 630
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[28]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 652
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[29]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 674
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[30]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 696
+        Warning (14320): Synthesized away node "simon_top:U_SIMON_top|outram:U_OUT_RAM|altsyncram:altsyncram_component|altsyncram_89p3:auto_generated|q_a[31]" File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_89p3.tdf Line: 718
+Warning (13012): Latch simon_top:U_SIMON_top|controller:U_CONTL|round[0] has unsafe behavior File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal simon_top:U_SIMON_top|controller:U_CONTL|state.state3 File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 30
+Warning (13012): Latch simon_top:U_SIMON_top|controller:U_CONTL|round[1] has unsafe behavior File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal simon_top:U_SIMON_top|controller:U_CONTL|state.state3 File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 30
+Warning (13012): Latch simon_top:U_SIMON_top|controller:U_CONTL|round[2] has unsafe behavior File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal simon_top:U_SIMON_top|controller:U_CONTL|state.state3 File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 30
+Warning (13012): Latch simon_top:U_SIMON_top|controller:U_CONTL|round[3] has unsafe behavior File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal simon_top:U_SIMON_top|controller:U_CONTL|state.state3 File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 30
+Warning (13012): Latch simon_top:U_SIMON_top|controller:U_CONTL|round[4] has unsafe behavior File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal simon_top:U_SIMON_top|controller:U_CONTL|state.state3 File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/controller.vhd Line: 30
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led0[0]" is stuck at VCC File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 13
+    Warning (13410): Pin "led0[4]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 13
+    Warning (13410): Pin "led0[5]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 13
+    Warning (13410): Pin "led0_dp" is stuck at VCC File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 14
+    Warning (13410): Pin "led1[0]" is stuck at VCC File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 15
+    Warning (13410): Pin "led1[4]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 15
+    Warning (13410): Pin "led1[5]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 15
+    Warning (13410): Pin "led1_dp" is stuck at VCC File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 16
+    Warning (13410): Pin "led2[0]" is stuck at VCC File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 17
+    Warning (13410): Pin "led2[1]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 17
+    Warning (13410): Pin "led2[2]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 17
+    Warning (13410): Pin "led2[3]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 17
+    Warning (13410): Pin "led2[4]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 17
+    Warning (13410): Pin "led2[5]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 17
+    Warning (13410): Pin "led2[6]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 17
+    Warning (13410): Pin "led2_dp" is stuck at VCC File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 18
+    Warning (13410): Pin "led3[0]" is stuck at VCC File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 19
+    Warning (13410): Pin "led3[1]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 19
+    Warning (13410): Pin "led3[2]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 19
+    Warning (13410): Pin "led3[3]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 19
+    Warning (13410): Pin "led3[4]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 19
+    Warning (13410): Pin "led3[5]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 19
+    Warning (13410): Pin "led3[6]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 19
+    Warning (13410): Pin "led3_dp" is stuck at VCC File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 20
+    Warning (13410): Pin "led4[0]" is stuck at VCC File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 21
+    Warning (13410): Pin "led4[1]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 21
+    Warning (13410): Pin "led4[2]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 21
+    Warning (13410): Pin "led4[3]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 21
+    Warning (13410): Pin "led4[4]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 21
+    Warning (13410): Pin "led4[5]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 21
+    Warning (13410): Pin "led4[6]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 21
+    Warning (13410): Pin "led4_dp" is stuck at VCC File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 22
+    Warning (13410): Pin "led5[0]" is stuck at VCC File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 23
+    Warning (13410): Pin "led5[1]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 23
+    Warning (13410): Pin "led5[2]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 23
+    Warning (13410): Pin "led5[3]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 23
+    Warning (13410): Pin "led5[4]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 23
+    Warning (13410): Pin "led5[5]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 23
+    Warning (13410): Pin "led5[6]" is stuck at GND File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 23
+    Warning (13410): Pin "led5_dp" is stuck at VCC File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/top_level.vhd Line: 24
+Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 34
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 34
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 34
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 34
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 34
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 34
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 34
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 34
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 34
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 34
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 34
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_vct2.tdf Line: 34
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error (16031): Current Internal Configuration mode does not support memory initialization or ROM. Select Internal Configuration mode with ERAM. File: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon/db/altsyncram_ldq2.tdf Line: 35
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 44 errors, 96 warnings
+    Error: Peak virtual memory: 4819 megabytes
+    Error: Processing ended: Mon Nov 09 23:18:19 2020
+    Error: Elapsed time: 00:02:53
+    Error: Total CPU time (on all processors): 00:03:44
+
+

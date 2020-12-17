@@ -1,0 +1,753 @@
+TimeQuest Timing Analyzer report for FMS
+Sat Oct 10 21:31:27 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clk_gen:U_CLK_GEN|clk_div:U_CD|temp'
+ 12. Setup: 'clk50MHz'
+ 13. Hold: 'clk50MHz'
+ 14. Hold: 'clk_gen:U_CLK_GEN|clk_div:U_CD|temp'
+ 15. Setup Transfers
+ 16. Hold Transfers
+ 17. Report TCCS
+ 18. Report RSKM
+ 19. Unconstrained Paths Summary
+ 20. Clock Status Summary
+ 21. Unconstrained Input Ports
+ 22. Unconstrained Output Ports
+ 23. Unconstrained Input Ports
+ 24. Unconstrained Output Ports
+ 25. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; FMS                                                 ;
+; Device Family         ; MAX II                                              ;
+; Device Name           ; EPM2210F324C5                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                   ;
++-------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------+
+; Clock Name                          ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                 ;
++-------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------+
+; clk50MHz                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk50MHz }                            ;
+; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_gen:U_CLK_GEN|clk_div:U_CD|temp } ;
+; clk_gen:U_CLK_GEN|temp              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_gen:U_CLK_GEN|temp }              ;
++-------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Fmax Summary                                                              ;
++------------+-----------------+-------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                          ; Note ;
++------------+-----------------+-------------------------------------+------+
+; 112.7 MHz  ; 112.7 MHz       ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ;      ;
+; 121.95 MHz ; 121.95 MHz      ; clk50MHz                            ;      ;
++------------+-----------------+-------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------------------------+
+; Setup Summary                                                ;
++-------------------------------------+--------+---------------+
+; Clock                               ; Slack  ; End Point TNS ;
++-------------------------------------+--------+---------------+
+; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; -7.873 ; -230.491      ;
+; clk50MHz                            ; -7.200 ; -94.892       ;
++-------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------+
+; Hold Summary                                                ;
++-------------------------------------+-------+---------------+
+; Clock                               ; Slack ; End Point TNS ;
++-------------------------------------+-------+---------------+
+; clk50MHz                            ; 2.064 ; 0.000         ;
+; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 2.839 ; 0.000         ;
++-------------------------------------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------------------------------------+
+; Minimum Pulse Width Summary                                  ;
++-------------------------------------+--------+---------------+
+; Clock                               ; Slack  ; End Point TNS ;
++-------------------------------------+--------+---------------+
+; clk50MHz                            ; -2.289 ; -2.289        ;
+; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.234  ; 0.000         ;
+; clk_gen:U_CLK_GEN|temp              ; 0.234  ; 0.000         ;
++-------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk_gen:U_CLK_GEN|clk_div:U_CD|temp'                                                                                                                                        ;
++--------+---------------------------+---------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock                        ; Latch Clock                         ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
+; -7.873 ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.540      ;
+; -7.760 ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.427      ;
+; -7.730 ; clk_gen:U_CLK_GEN|cnt[10] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.397      ;
+; -7.665 ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.332      ;
+; -7.639 ; clk_gen:U_CLK_GEN|cnt[28] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.306      ;
+; -7.615 ; clk_gen:U_CLK_GEN|cnt[17] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.282      ;
+; -7.608 ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.275      ;
+; -7.601 ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.268      ;
+; -7.599 ; clk_gen:U_CLK_GEN|cnt[17] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.266      ;
+; -7.598 ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.265      ;
+; -7.596 ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|cnt[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.263      ;
+; -7.573 ; clk_gen:U_CLK_GEN|cnt[11] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.240      ;
+; -7.557 ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.224      ;
+; -7.541 ; clk_gen:U_CLK_GEN|cnt[11] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.208      ;
+; -7.533 ; clk_gen:U_CLK_GEN|cnt[10] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.200      ;
+; -7.508 ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.175      ;
+; -7.500 ; clk_gen:U_CLK_GEN|cnt[19] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.167      ;
+; -7.488 ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.155      ;
+; -7.476 ; clk_gen:U_CLK_GEN|cnt[10] ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.143      ;
+; -7.471 ; clk_gen:U_CLK_GEN|cnt[18] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.138      ;
+; -7.468 ; clk_gen:U_CLK_GEN|cnt[20] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.135      ;
+; -7.460 ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|cnt[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.127      ;
+; -7.458 ; clk_gen:U_CLK_GEN|cnt[10] ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.125      ;
+; -7.455 ; clk_gen:U_CLK_GEN|cnt[18] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.122      ;
+; -7.455 ; clk_gen:U_CLK_GEN|cnt[10] ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.122      ;
+; -7.453 ; clk_gen:U_CLK_GEN|cnt[10] ; clk_gen:U_CLK_GEN|cnt[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.120      ;
+; -7.448 ; clk_gen:U_CLK_GEN|cnt[27] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.115      ;
+; -7.446 ; clk_gen:U_CLK_GEN|cnt[8]  ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.113      ;
+; -7.444 ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.111      ;
+; -7.413 ; clk_gen:U_CLK_GEN|cnt[6]  ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.080      ;
+; -7.406 ; clk_gen:U_CLK_GEN|cnt[0]  ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.073      ;
+; -7.406 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.073      ;
+; -7.404 ; clk_gen:U_CLK_GEN|cnt[9]  ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.071      ;
+; -7.382 ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.049      ;
+; -7.377 ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|cnt[20] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.044      ;
+; -7.356 ; clk_gen:U_CLK_GEN|cnt[6]  ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.023      ;
+; -7.349 ; clk_gen:U_CLK_GEN|cnt[0]  ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.016      ;
+; -7.349 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.016      ;
+; -7.347 ; clk_gen:U_CLK_GEN|cnt[9]  ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.014      ;
+; -7.333 ; clk_gen:U_CLK_GEN|cnt[14] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 8.000      ;
+; -7.332 ; clk_gen:U_CLK_GEN|cnt[17] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.999      ;
+; -7.317 ; clk_gen:U_CLK_GEN|cnt[10] ; clk_gen:U_CLK_GEN|cnt[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.984      ;
+; -7.311 ; clk_gen:U_CLK_GEN|cnt[15] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.978      ;
+; -7.290 ; clk_gen:U_CLK_GEN|cnt[11] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.957      ;
+; -7.288 ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.955      ;
+; -7.287 ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|cnt[28] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.954      ;
+; -7.285 ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|cnt[27] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.952      ;
+; -7.285 ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.952      ;
+; -7.285 ; clk_gen:U_CLK_GEN|cnt[11] ; clk_gen:U_CLK_GEN|cnt[20] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.952      ;
+; -7.282 ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.949      ;
+; -7.280 ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|cnt[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.947      ;
+; -7.269 ; clk_gen:U_CLK_GEN|cnt[11] ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.936      ;
+; -7.266 ; clk_gen:U_CLK_GEN|cnt[11] ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.933      ;
+; -7.264 ; clk_gen:U_CLK_GEN|cnt[11] ; clk_gen:U_CLK_GEN|cnt[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.931      ;
+; -7.261 ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.928      ;
+; -7.260 ; clk_gen:U_CLK_GEN|cnt[19] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.927      ;
+; -7.256 ; clk_gen:U_CLK_GEN|cnt[14] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.923      ;
+; -7.250 ; clk_gen:U_CLK_GEN|cnt[10] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.917      ;
+; -7.245 ; clk_gen:U_CLK_GEN|cnt[10] ; clk_gen:U_CLK_GEN|cnt[20] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.912      ;
+; -7.225 ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.892      ;
+; -7.220 ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|cnt[20] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.887      ;
+; -7.218 ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.885      ;
+; -7.217 ; clk_gen:U_CLK_GEN|cnt[19] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.884      ;
+; -7.216 ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.883      ;
+; -7.213 ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.880      ;
+; -7.212 ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.879      ;
+; -7.212 ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.879      ;
+; -7.211 ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|cnt[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.878      ;
+; -7.209 ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.876      ;
+; -7.206 ; clk_gen:U_CLK_GEN|cnt[7]  ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.873      ;
+; -7.196 ; clk_gen:U_CLK_GEN|cnt[9]  ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.863      ;
+; -7.188 ; clk_gen:U_CLK_GEN|cnt[18] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.855      ;
+; -7.185 ; clk_gen:U_CLK_GEN|cnt[20] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.852      ;
+; -7.176 ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.843      ;
+; -7.174 ; clk_gen:U_CLK_GEN|cnt[8]  ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.841      ;
+; -7.171 ; clk_gen:U_CLK_GEN|cnt[8]  ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.838      ;
+; -7.169 ; clk_gen:U_CLK_GEN|cnt[8]  ; clk_gen:U_CLK_GEN|cnt[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.836      ;
+; -7.167 ; clk_gen:U_CLK_GEN|cnt[28] ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.834      ;
+; -7.166 ; clk_gen:U_CLK_GEN|cnt[28] ; clk_gen:U_CLK_GEN|cnt[28] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.833      ;
+; -7.164 ; clk_gen:U_CLK_GEN|cnt[28] ; clk_gen:U_CLK_GEN|cnt[27] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.831      ;
+; -7.161 ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.828      ;
+; -7.156 ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|cnt[20] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.823      ;
+; -7.155 ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.822      ;
+; -7.152 ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.819      ;
+; -7.151 ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|cnt[25] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.818      ;
+; -7.151 ; clk_gen:U_CLK_GEN|cnt[15] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.818      ;
+; -7.144 ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|cnt[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.811      ;
+; -7.140 ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|temp    ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.807      ;
+; -7.130 ; clk_gen:U_CLK_GEN|cnt[6]  ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.797      ;
+; -7.129 ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|cnt[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.796      ;
+; -7.128 ; clk_gen:U_CLK_GEN|cnt[11] ; clk_gen:U_CLK_GEN|cnt[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.795      ;
+; -7.127 ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|cnt[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.794      ;
+; -7.127 ; clk_gen:U_CLK_GEN|cnt[17] ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.794      ;
+; -7.126 ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.793      ;
+; -7.126 ; clk_gen:U_CLK_GEN|cnt[17] ; clk_gen:U_CLK_GEN|cnt[28] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.793      ;
+; -7.125 ; clk_gen:U_CLK_GEN|cnt[6]  ; clk_gen:U_CLK_GEN|cnt[20] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.792      ;
+; -7.124 ; clk_gen:U_CLK_GEN|cnt[17] ; clk_gen:U_CLK_GEN|cnt[27] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.791      ;
+; -7.123 ; clk_gen:U_CLK_GEN|cnt[0]  ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.790      ;
+; -7.123 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.790      ;
+; -7.121 ; clk_gen:U_CLK_GEN|cnt[9]  ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1.000        ; 0.000      ; 7.788      ;
++--------+---------------------------+---------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk50MHz'                                                                                                                                                  ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -7.200 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 7.867      ;
+; -6.870 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 7.537      ;
+; -6.642 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 7.309      ;
+; -6.471 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 7.138      ;
+; -6.466 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 7.133      ;
+; -6.288 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.955      ;
+; -6.105 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.772      ;
+; -5.958 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.625      ;
+; -5.945 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.612      ;
+; -5.920 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.587      ;
+; -5.875 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.542      ;
+; -5.874 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.541      ;
+; -5.822 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.489      ;
+; -5.775 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.442      ;
+; -5.766 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.433      ;
+; -5.730 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.397      ;
+; -5.722 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.389      ;
+; -5.696 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.363      ;
+; -5.677 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.344      ;
+; -5.676 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.343      ;
+; -5.651 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.318      ;
+; -5.650 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.317      ;
+; -5.649 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.316      ;
+; -5.632 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.299      ;
+; -5.626 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.293      ;
+; -5.618 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.285      ;
+; -5.615 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.282      ;
+; -5.607 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.274      ;
+; -5.606 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.273      ;
+; -5.597 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.264      ;
+; -5.578 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.245      ;
+; -5.559 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.226      ;
+; -5.554 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.221      ;
+; -5.548 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.215      ;
+; -5.547 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.214      ;
+; -5.542 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.209      ;
+; -5.503 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.170      ;
+; -5.502 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.169      ;
+; -5.492 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.159      ;
+; -5.434 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.101      ;
+; -5.428 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.095      ;
+; -5.420 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.087      ;
+; -5.409 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.076      ;
+; -5.408 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.075      ;
+; -5.408 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.075      ;
+; -5.402 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.069      ;
+; -5.394 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.061      ;
+; -5.387 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.054      ;
+; -5.383 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.050      ;
+; -5.383 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.050      ;
+; -5.382 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.049      ;
+; -5.376 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.043      ;
+; -5.371 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.038      ;
+; -5.370 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.037      ;
+; -5.358 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.025      ;
+; -5.347 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.014      ;
+; -5.338 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.005      ;
+; -5.337 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.004      ;
+; -5.336 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.003      ;
+; -5.335 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 6.002      ;
+; -5.325 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.992      ;
+; -5.324 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.991      ;
+; -5.322 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.989      ;
+; -5.285 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.952      ;
+; -5.278 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.945      ;
+; -5.267 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.934      ;
+; -5.260 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.927      ;
+; -5.254 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.921      ;
+; -5.248 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.915      ;
+; -5.246 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.913      ;
+; -5.239 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.906      ;
+; -5.239 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.906      ;
+; -5.238 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.905      ;
+; -5.235 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.902      ;
+; -5.234 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.901      ;
+; -5.216 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.883      ;
+; -5.213 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.880      ;
+; -5.212 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.879      ;
+; -5.211 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.878      ;
+; -5.193 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.860      ;
+; -5.163 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.830      ;
+; -5.163 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.830      ;
+; -5.121 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.788      ;
+; -5.112 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.779      ;
+; -5.110 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.777      ;
+; -5.102 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.769      ;
+; -5.095 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.762      ;
+; -5.095 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.762      ;
+; -5.089 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.756      ;
+; -5.082 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.749      ;
+; -5.081 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.748      ;
+; -5.076 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.743      ;
+; -5.070 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.737      ;
+; -5.069 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.736      ;
+; -5.068 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.735      ;
+; -5.057 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.724      ;
+; -5.056 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.723      ;
+; -5.039 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.706      ;
+; -5.038 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.705      ;
+; -5.020 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 1.000        ; 0.000      ; 5.687      ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk50MHz'                                                                                                                                                  ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 2.064 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.285      ;
+; 2.535 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.756      ;
+; 2.569 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 2.790      ;
+; 3.016 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.237      ;
+; 3.035 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.256      ;
+; 3.110 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.331      ;
+; 3.140 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.361      ;
+; 3.253 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.474      ;
+; 3.269 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.490      ;
+; 3.274 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.495      ;
+; 3.289 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.510      ;
+; 3.293 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.514      ;
+; 3.445 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.666      ;
+; 3.610 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.831      ;
+; 3.643 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.864      ;
+; 3.670 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.891      ;
+; 3.673 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.894      ;
+; 3.759 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 3.980      ;
+; 3.798 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.019      ;
+; 3.810 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.031      ;
+; 3.815 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.036      ;
+; 3.877 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.098      ;
+; 3.892 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.113      ;
+; 3.911 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.132      ;
+; 3.937 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.158      ;
+; 3.959 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.180      ;
+; 3.982 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.203      ;
+; 3.986 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.207      ;
+; 4.003 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.224      ;
+; 4.015 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.236      ;
+; 4.049 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.270      ;
+; 4.091 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.312      ;
+; 4.139 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.360      ;
+; 4.175 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.396      ;
+; 4.183 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.404      ;
+; 4.214 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.435      ;
+; 4.231 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.452      ;
+; 4.307 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.528      ;
+; 4.310 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.531      ;
+; 4.315 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.536      ;
+; 4.334 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.555      ;
+; 4.336 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.557      ;
+; 4.343 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.564      ;
+; 4.348 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.569      ;
+; 4.353 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.574      ;
+; 4.354 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.575      ;
+; 4.356 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.577      ;
+; 4.379 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.600      ;
+; 4.380 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.601      ;
+; 4.387 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.608      ;
+; 4.486 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.707      ;
+; 4.490 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.711      ;
+; 4.503 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.724      ;
+; 4.510 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.731      ;
+; 4.519 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.740      ;
+; 4.544 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.765      ;
+; 4.554 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.775      ;
+; 4.590 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.811      ;
+; 4.592 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.813      ;
+; 4.597 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.818      ;
+; 4.609 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.830      ;
+; 4.673 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp      ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.894      ;
+; 4.674 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.895      ;
+; 4.714 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.935      ;
+; 4.717 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.938      ;
+; 4.719 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.940      ;
+; 4.721 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.942      ;
+; 4.747 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.968      ;
+; 4.768 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 4.989      ;
+; 4.780 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.001      ;
+; 4.785 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.006      ;
+; 4.807 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.028      ;
+; 4.829 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.050      ;
+; 4.833 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.054      ;
+; 4.834 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.055      ;
+; 4.850 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.071      ;
+; 4.875 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.096      ;
+; 4.880 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.101      ;
+; 4.902 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.123      ;
+; 4.941 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.162      ;
+; 4.954 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.175      ;
+; 4.957 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.178      ;
+; 4.980 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.201      ;
+; 4.981 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.202      ;
+; 4.997 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.218      ;
+; 5.000 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.221      ;
+; 5.002 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.223      ;
+; 5.003 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.224      ;
+; 5.034 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[8]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.255      ;
+; 5.039 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.260      ;
+; 5.044 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.265      ;
+; 5.051 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[9]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.272      ;
+; 5.071 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.292      ;
+; 5.077 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[6]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.298      ;
+; 5.117 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[14] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.338      ;
+; 5.121 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[15] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.342      ;
+; 5.131 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[11] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[13] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.352      ;
+; 5.141 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.362      ;
+; 5.143 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[10] ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[12] ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.364      ;
+; 5.156 ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|count[7]  ; clk50MHz     ; clk50MHz    ; 0.000        ; 0.000      ; 5.377      ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk_gen:U_CLK_GEN|clk_div:U_CD|temp'                                                                                                                                        ;
++-------+---------------------------+---------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock                        ; Latch Clock                         ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
+; 2.839 ; clk_gen:U_CLK_GEN|cnt[0]  ; clk_gen:U_CLK_GEN|cnt[0]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 3.060      ;
+; 3.134 ; clk_gen:U_CLK_GEN|cnt[27] ; clk_gen:U_CLK_GEN|cnt[27] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 3.355      ;
+; 3.309 ; clk_gen:U_CLK_GEN|cnt[28] ; clk_gen:U_CLK_GEN|cnt[28] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 3.530      ;
+; 3.358 ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 3.579      ;
+; 3.383 ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 3.604      ;
+; 3.755 ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 3.976      ;
+; 3.875 ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.096      ;
+; 3.887 ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|cnt[31] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.108      ;
+; 3.941 ; clk_gen:U_CLK_GEN|cnt[27] ; clk_gen:U_CLK_GEN|cnt[28] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.162      ;
+; 3.962 ; clk_gen:U_CLK_GEN|cnt[7]  ; clk_gen:U_CLK_GEN|cnt[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.183      ;
+; 4.147 ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|cnt[27] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.368      ;
+; 4.158 ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.379      ;
+; 4.258 ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|cnt[28] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.479      ;
+; 4.285 ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.506      ;
+; 4.347 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[22] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.568      ;
+; 4.350 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.571      ;
+; 4.356 ; clk_gen:U_CLK_GEN|cnt[6]  ; clk_gen:U_CLK_GEN|cnt[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.577      ;
+; 4.357 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[23] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.578      ;
+; 4.358 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.579      ;
+; 4.360 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[25] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.581      ;
+; 4.360 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.581      ;
+; 4.382 ; clk_gen:U_CLK_GEN|cnt[8]  ; clk_gen:U_CLK_GEN|cnt[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.603      ;
+; 4.411 ; clk_gen:U_CLK_GEN|cnt[27] ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.632      ;
+; 4.467 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[18] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.688      ;
+; 4.478 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[17] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.699      ;
+; 4.531 ; clk_gen:U_CLK_GEN|cnt[28] ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.752      ;
+; 4.532 ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.753      ;
+; 4.570 ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.791      ;
+; 4.632 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.853      ;
+; 4.643 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.864      ;
+; 4.650 ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|cnt[22] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.871      ;
+; 4.653 ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.874      ;
+; 4.660 ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|cnt[23] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.881      ;
+; 4.661 ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.882      ;
+; 4.663 ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|cnt[25] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.884      ;
+; 4.663 ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.884      ;
+; 4.666 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.887      ;
+; 4.728 ; clk_gen:U_CLK_GEN|cnt[26] ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.949      ;
+; 4.753 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.974      ;
+; 4.754 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.975      ;
+; 4.756 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.977      ;
+; 4.770 ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|cnt[18] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 4.991      ;
+; 4.781 ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|cnt[17] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.002      ;
+; 4.788 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.009      ;
+; 4.794 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.015      ;
+; 4.915 ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.136      ;
+; 4.928 ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|cnt[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.149      ;
+; 4.930 ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.151      ;
+; 4.935 ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.156      ;
+; 4.946 ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.167      ;
+; 4.947 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.168      ;
+; 4.949 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.170      ;
+; 4.952 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[8]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.173      ;
+; 4.953 ; clk_gen:U_CLK_GEN|cnt[6]  ; clk_gen:U_CLK_GEN|cnt[7]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.174      ;
+; 4.954 ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.175      ;
+; 4.956 ; clk_gen:U_CLK_GEN|cnt[0]  ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.177      ;
+; 4.956 ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.177      ;
+; 4.968 ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.189      ;
+; 4.972 ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.193      ;
+; 4.999 ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.220      ;
+; 5.004 ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|cnt[22] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.225      ;
+; 5.007 ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.228      ;
+; 5.009 ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|cnt[22] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.230      ;
+; 5.012 ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.233      ;
+; 5.014 ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|cnt[23] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.235      ;
+; 5.015 ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.236      ;
+; 5.017 ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|cnt[25] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.238      ;
+; 5.017 ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.238      ;
+; 5.019 ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|cnt[23] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.240      ;
+; 5.020 ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.241      ;
+; 5.022 ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|cnt[25] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.243      ;
+; 5.022 ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.243      ;
+; 5.036 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[10] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.257      ;
+; 5.040 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[20] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.261      ;
+; 5.044 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[12] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.265      ;
+; 5.054 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[9]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.275      ;
+; 5.057 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[19] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.278      ;
+; 5.058 ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|cnt[11] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.279      ;
+; 5.068 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[22] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.289      ;
+; 5.070 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.291      ;
+; 5.074 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[23] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.295      ;
+; 5.075 ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.296      ;
+; 5.082 ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|cnt[6]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.303      ;
+; 5.084 ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.305      ;
+; 5.101 ; clk_gen:U_CLK_GEN|cnt[0]  ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.322      ;
+; 5.104 ; clk_gen:U_CLK_GEN|cnt[25] ; clk_gen:U_CLK_GEN|cnt[22] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.325      ;
+; 5.107 ; clk_gen:U_CLK_GEN|cnt[25] ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.328      ;
+; 5.110 ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.331      ;
+; 5.114 ; clk_gen:U_CLK_GEN|cnt[25] ; clk_gen:U_CLK_GEN|cnt[23] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.335      ;
+; 5.115 ; clk_gen:U_CLK_GEN|cnt[25] ; clk_gen:U_CLK_GEN|cnt[24] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.336      ;
+; 5.116 ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|cnt[5]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.337      ;
+; 5.117 ; clk_gen:U_CLK_GEN|cnt[25] ; clk_gen:U_CLK_GEN|cnt[25] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.338      ;
+; 5.117 ; clk_gen:U_CLK_GEN|cnt[25] ; clk_gen:U_CLK_GEN|cnt[29] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.338      ;
+; 5.122 ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|cnt[2]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.343      ;
+; 5.124 ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|cnt[18] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.345      ;
+; 5.126 ; clk_gen:U_CLK_GEN|cnt[16] ; clk_gen:U_CLK_GEN|cnt[4]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.347      ;
+; 5.129 ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|cnt[18] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.350      ;
+; 5.135 ; clk_gen:U_CLK_GEN|cnt[21] ; clk_gen:U_CLK_GEN|cnt[17] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.356      ;
+; 5.140 ; clk_gen:U_CLK_GEN|cnt[30] ; clk_gen:U_CLK_GEN|cnt[17] ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.361      ;
+; 5.141 ; clk_gen:U_CLK_GEN|cnt[1]  ; clk_gen:U_CLK_GEN|cnt[3]  ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 0.000        ; 0.000      ; 5.362      ;
++-------+---------------------------+---------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                       ;
++-------------------------------------+-------------------------------------+----------+----------+----------+----------+
+; From Clock                          ; To Clock                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------------+-------------------------------------+----------+----------+----------+----------+
+; clk50MHz                            ; clk50MHz                            ; 344      ; 0        ; 0        ; 0        ;
+; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1968     ; 0        ; 0        ; 0        ;
++-------------------------------------+-------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                        ;
++-------------------------------------+-------------------------------------+----------+----------+----------+----------+
+; From Clock                          ; To Clock                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------------+-------------------------------------+----------+----------+----------+----------+
+; clk50MHz                            ; clk50MHz                            ; 344      ; 0        ; 0        ; 0        ;
+; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; 1968     ; 0        ; 0        ; 0        ;
++-------------------------------------+-------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 7     ; 7    ;
+; Unconstrained Input Port Paths  ; 95    ; 95   ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 28    ; 28   ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                           ;
++-------------------------------------+-------------------------------------+------+-------------+
+; Target                              ; Clock                               ; Type ; Status      ;
++-------------------------------------+-------------------------------------+------+-------------+
+; clk50MHz                            ; clk50MHz                            ; Base ; Constrained ;
+; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; clk_gen:U_CLK_GEN|clk_div:U_CD|temp ; Base ; Constrained ;
+; clk_gen:U_CLK_GEN|temp              ; clk_gen:U_CLK_GEN|temp              ; Base ; Constrained ;
++-------------------------------------+-------------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; button[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch[4]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch[6]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch[7]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch[8]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch[9]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; led4[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; button[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch[4]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch[6]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch[7]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch[8]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch[9]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; led4[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sat Oct 10 21:31:22 2020
+Info: Command: quartus_sta FMS -c FMS
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'FMS.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk_gen:U_CLK_GEN|temp clk_gen:U_CLK_GEN|temp
+    Info (332105): create_clock -period 1.000 -name clk_gen:U_CLK_GEN|clk_div:U_CD|temp clk_gen:U_CLK_GEN|clk_div:U_CD|temp
+    Info (332105): create_clock -period 1.000 -name clk50MHz clk50MHz
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -7.873
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -7.873            -230.491 clk_gen:U_CLK_GEN|clk_div:U_CD|temp 
+    Info (332119):    -7.200             -94.892 clk50MHz 
+Info (332146): Worst-case hold slack is 2.064
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.064               0.000 clk50MHz 
+    Info (332119):     2.839               0.000 clk_gen:U_CLK_GEN|clk_div:U_CD|temp 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clk50MHz 
+    Info (332119):     0.234               0.000 clk_gen:U_CLK_GEN|clk_div:U_CD|temp 
+    Info (332119):     0.234               0.000 clk_gen:U_CLK_GEN|temp 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4657 megabytes
+    Info: Processing ended: Sat Oct 10 21:31:27 2020
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
+
+

@@ -1,0 +1,72 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Johnny Li/Desktop/QuartusDD/Lab3
+Eadd
+Z0 w1601183222
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/Johnny Li/Desktop/QuartusDD/Test
+Z5 8C:/Users/Johnny Li/Desktop/QuartusDD/Test/Test.vhd
+Z6 FC:/Users/Johnny Li/Desktop/QuartusDD/Test/Test.vhd
+l0
+L5
+Vo1RQbQ9d2d>8fi2g4lVWL1
+!s100 [b0k=]33lJgH>=?hL4>`[1
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1601184286
+!i10b 1
+Z9 !s108 1601184285.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Test/Test.vhd|
+Z11 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Test/Test.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abhv
+R1
+R2
+R3
+DEx4 work 3 add 0 22 o1RQbQ9d2d>8fi2g4lVWL1
+l14
+L12
+V>[QW4DF@Di:]3T3n[Kc2f1
+!s100 3BjA]PbCT`Oi=mXdXbNnM3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Etest_tb
+w1601184982
+R2
+R3
+R4
+8C:\Users\Johnny Li\Desktop\QuartusDD\Test\Test_tb.vhd
+FC:\Users\Johnny Li\Desktop\QuartusDD\Test\Test_tb.vhd
+l0
+L4
+VJ6nE@BfOf4P>5]a8GDPT[2
+!s100 =BF40bAjbc4<^Ge?X3cl41
+R7
+32
+!s110 1601184989
+!i10b 1
+!s108 1601184988.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Johnny Li\Desktop\QuartusDD\Test\Test_tb.vhd|
+!s107 C:\Users\Johnny Li\Desktop\QuartusDD\Test\Test_tb.vhd|
+!i113 1
+R12
+R13

@@ -1,0 +1,162 @@
+{C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/outram.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/outram.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity outram
+-- Compiling architecture SYN of outram
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon_top.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon_top.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package constants
+-- Compiling entity simon_top
+-- Compiling architecture STR of simon_top
+-- Loading entity simon
+-- Loading entity controller
+-- Loading package altera_mf_components
+-- Loading entity keyrom
+-- Loading entity inram
+-- Loading entity outram
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading entity CounterE
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/top_level.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/top_level.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity top_level
+-- Compiling architecture STR of top_level
+-- Loading package constants
+-- Loading entity simon_top
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon_top_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon_top_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package constants
+-- Compiling entity simon_top_tb
+-- Compiling architecture TB of simon_top_tb
+-- Loading package NUMERIC_STD
+-- Loading entity simon_top
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/round.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/round.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package constants
+-- Compiling entity round
+-- Compiling architecture BHV of round
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/mux4to1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/mux4to1.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux4to1
+-- Compiling architecture Dataflow of mux4to1
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/key_expansion_tb.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/key_expansion_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package constants
+-- Compiling entity key_expansion_tb
+-- Compiling architecture TB of key_expansion_tb
+-- Loading package NUMERIC_STD
+-- Loading entity key_expansion
+** Warning: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/key_expansion_tb.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/key_expansion_tb.vhd(43): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/key_expansion_tb.vhd(51): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/controller.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/controller.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package constants
+-- Compiling entity controller
+-- Compiling architecture FSM2P of controller
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/decoder7seg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/decoder7seg.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity decoder7seg
+-- Compiling architecture BHV of decoder7seg
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/round_tb.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/round_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package constants
+-- Compiling entity round_tb
+-- Compiling architecture TB of round_tb
+-- Loading package NUMERIC_STD
+-- Loading entity round
+** Warning: C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/round_tb.vhd(33): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/counterE.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/counterE.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity CounterE
+-- Compiling architecture Behavioral of CounterE
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/constants.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/constants.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package constants
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/key_expansion.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/key_expansion.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package constants
+-- Compiling entity key_expansion
+-- Compiling architecture BHV of key_expansion
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/simon.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package constants
+-- Compiling entity simon
+-- Compiling architecture datapath of simon
+-- Loading entity key_expansion
+-- Loading entity mux4to1
+-- Loading entity reg
+-- Loading entity round
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/reg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Lab6/reg.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reg
+-- Compiling architecture BHV of reg
+
+} {} {}}

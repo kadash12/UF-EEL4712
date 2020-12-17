@@ -1,0 +1,181 @@
+{C:/Users/Johnny Li/Desktop/QuartusDD/Week1/signextender.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/signextender.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity signextender
+-- Compiling architecture BHV of signextender
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/alu.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/alu.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity alu
+-- Compiling architecture BHV of alu
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/mux4to1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/mux4to1.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux4to1
+-- Compiling architecture Dataflow of mux4to1
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week3/decoder7seg.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week3/decoder7seg.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+** Warning: (vcom-6) -- Waiting for lock by "unknown". Lockfile is "C:/Users/Johnny Li/Desktop/QuartusDD/Week1/work/_lock".
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity decoder7seg
+-- Compiling architecture BHV of decoder7seg
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/memory_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/memory_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory_tb
+-- Compiling architecture TB of memory_tb
+-- Loading entity memory
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/reg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/reg.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reg
+-- Compiling architecture BHV of reg
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/registers_file.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/registers_file.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity registers_file
+-- Compiling architecture BHV of registers_file
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/datapath.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/datapath.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity datapath
+-- Compiling architecture STR of datapath
+-- Loading entity memory
+-- Loading entity reg
+-- Loading entity alu
+-- Loading entity mux2x1
+-- Loading entity mux4to1
+-- Loading entity registers_file
+-- Loading entity signextender
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/alu_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/alu_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity alu_tb
+-- Compiling architecture TB of alu_tb
+-- Loading entity alu
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/ram.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/ram.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity ram
+-- Compiling architecture SYN of ram
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/memory.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory
+-- Compiling architecture BHV of memory
+-- Loading entity mux4to1
+-- Loading entity reg
+-- Loading package altera_mf_components
+-- Loading entity ram
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week2/mips.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week2/mips.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mips
+-- Compiling architecture BHV of mips
+-- Loading entity datapath
+-- Loading entity controller
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/alu_extra_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/alu_extra_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity alu_extra_tb
+-- Compiling architecture TB of alu_extra_tb
+-- Loading entity alu
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week3/top_level.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week3/top_level.vhd}
+-- Compiling entity ram
+-- Compiling architecture SYN of ram
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity top_level
+-- Compiling architecture STR of top_level
+-- Loading entity mips
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/mux2x1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/mux2x1.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2x1
+-- Compiling architecture BHV of mux2x1
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week2/controller.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week2/controller.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity controller
+-- Compiling architecture FSM of controller
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/w1/ram.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week1/w1/ram.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity ram
+-- Compiling architecture SYN of ram
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/Week2/w2_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/Week2/w2_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mips_tb
+-- Compiling architecture TB of mips_tb
+-- Loading entity mips
+
+} {} {}}

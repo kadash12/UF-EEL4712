@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Tue Dec 01 11:34:25 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Final_Project
+Top-level Entity Name : top_level
+Family : MAX 10
+Total logic elements : 3,954
+    Total combinational functions : 2,862
+    Dedicated logic registers : 1,332
+Total registers : 1332
+Total pins : 61
+Total virtual pins : 0
+Total memory bits : 8,192
+Embedded Multiplier 9-bit elements : 16
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

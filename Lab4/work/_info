@@ -1,0 +1,552 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Johnny Li/Desktop/QuartusDD/Lab3
+Eclk_div
+Z0 w1602287939
+Z1 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dC:/Users/Johnny Li/Desktop/QuartusDD/Lab4
+Z6 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_div.vhd
+Z7 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_div.vhd
+l0
+L10
+Vd<i3=4Y2YLa364fDBC]522
+!s100 ?Q@3Y8l@Pg@;GZK:C8McP2
+Z8 OV;C;10.5b;63
+32
+Z9 !s110 1602624792
+!i10b 1
+Z10 !s108 1602624791.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_div.vhd|
+Z12 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_div.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Abhv
+R1
+R2
+R3
+R4
+Z15 DEx4 work 7 clk_div 0 22 d<i3=4Y2YLa364fDBC]522
+l28
+L22
+V56E`iTZ9A`TR:_bjbh=7D3
+!s100 T3V;kSVk9GLgb3_ze9i052
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Eclk_div_tb
+Z16 w1602269429
+R2
+R3
+R4
+R5
+Z17 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_div_tb.vhd
+Z18 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_div_tb.vhd
+l0
+L5
+Vg=<6<EUHjhNDjk=c>7l=H0
+!s100 5;;2kz8FVec:7gRXafWcL1
+R8
+32
+R9
+!i10b 1
+Z19 !s108 1602624792.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_div_tb.vhd|
+Z21 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_div_tb.vhd|
+!i113 1
+R13
+R14
+Atb
+R2
+R3
+R4
+DEx4 work 10 clk_div_tb 0 22 g=<6<EUHjhNDjk=c>7l=H0
+l27
+L9
+VhOHlIgWaiAUR@lJPn3M<o3
+!s100 EPBIiK1720k`[W[RLH7>J3
+R8
+32
+R9
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R13
+R14
+Eclk_gen
+Z22 w1602288025
+R1
+R2
+R3
+R4
+R5
+Z23 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_gen.vhd
+Z24 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_gen.vhd
+l0
+L11
+Vg7M5oYVVOi?;CR=`jONE71
+!s100 YPc0cUA;M2H2KcDPdd16L3
+R8
+32
+Z25 !s110 1602624793
+!i10b 1
+R19
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_gen.vhd|
+Z27 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_gen.vhd|
+!i113 1
+R13
+R14
+Abhv
+R15
+R1
+R2
+R3
+R4
+Z28 DEx4 work 7 clk_gen 0 22 g7M5oYVVOi?;CR=`jONE71
+l28
+L22
+V3YlS:zRDKl>]8fCX1E5MI0
+!s100 fPKoN1_gWieI`MF15T@hb0
+R8
+32
+R25
+!i10b 1
+R19
+R26
+R27
+!i113 1
+R13
+R14
+Aclk_gen_arch
+DEx4 work 7 clk_div 0 22 :<ID:]zz;=7VHil9g0CVG1
+R1
+R2
+R3
+R4
+R28
+l28
+L23
+V?ON?5@??_7d20O>28`So01
+!s100 dkjY4innJ>;CHacl`7f5`1
+R8
+32
+!s110 1602279537
+!i10b 1
+!s108 1602279537.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Johnny Li\Desktop\QuartusDD\Lab4\FSM\clk_gen.vhd|
+!s107 C:\Users\Johnny Li\Desktop\QuartusDD\Lab4\FSM\clk_gen.vhd|
+!i113 1
+R13
+R14
+w1602279521
+FC:\Users\Johnny Li\Desktop\QuartusDD\Lab4\FSM\clk_gen.vhd
+8C:\Users\Johnny Li\Desktop\QuartusDD\Lab4\FSM\clk_gen.vhd
+Eclk_gen_tb
+Z29 w1602279425
+R2
+R3
+R4
+R5
+Z30 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_gen_tb.vhd
+Z31 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_gen_tb.vhd
+l0
+L5
+VGn2HT?FBh3o]gVo``42>N3
+!s100 7zX3A40Uziz8MMcZjSa0R0
+R8
+32
+R25
+!i10b 1
+Z32 !s108 1602624793.000000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_gen_tb.vhd|
+Z34 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/clk_gen_tb.vhd|
+!i113 1
+R13
+R14
+Atb
+R1
+R28
+R2
+R3
+R4
+DEx4 work 10 clk_gen_tb 0 22 Gn2HT?FBh3o]gVo``42>N3
+l25
+L8
+Vd7lRX?@z9:lT48ka?QP0Z3
+!s100 DR12^2dFZ@bWf^C<LO:zX2
+R8
+32
+Z35 !s110 1602624794
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R13
+R14
+Ecounter
+Z36 w1602379499
+R2
+R3
+R4
+R5
+Z37 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/counter.vhd
+Z38 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/counter.vhd
+l0
+L7
+V`dOk_E@0DgFV4V77fMXob3
+!s100 <idd79h^eBIW^LPLhb_KA3
+R8
+32
+R35
+!i10b 1
+Z39 !s108 1602624794.000000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/counter.vhd|
+Z41 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/counter.vhd|
+!i113 1
+R13
+R14
+Abhv
+R2
+R3
+R4
+Z42 DEx4 work 7 counter 0 22 `dOk_E@0DgFV4V77fMXob3
+l22
+L18
+Va:zSN?lLH12SSVzD97@<40
+!s100 Y;<38NMH9d0jgP9O@0RaO3
+R8
+32
+R35
+!i10b 1
+R39
+R40
+R41
+!i113 1
+R13
+R14
+Ecounter_tb
+Z43 w1602379522
+R3
+R4
+R5
+Z44 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/counter_tb.vhd
+Z45 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/counter_tb.vhd
+l0
+L7
+Vh5XOA4J;k6i_hFP_E@Fho2
+!s100 cfdajcb0GX2Uz6]l`0aCI0
+R8
+32
+Z46 !s110 1602624798
+!i10b 1
+Z47 !s108 1602624798.000000
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/counter_tb.vhd|
+Z49 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/counter_tb.vhd|
+!i113 1
+R13
+R14
+Atb
+R2
+R42
+R3
+R4
+DEx4 work 10 counter_tb 0 22 h5XOA4J;k6i_hFP_E@Fho2
+l16
+L10
+V95aQ5`UDTX`3P@03hC7X83
+!s100 8=P=7>X<@LI@E`VOEW_L20
+R8
+32
+R46
+!i10b 1
+R47
+R48
+R49
+!i113 1
+R13
+R14
+Edecoder7seg
+Z50 w1602265116
+R3
+R4
+R5
+Z51 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/decoder7seg.vhd
+Z52 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/decoder7seg.vhd
+l0
+L4
+Vaa_CODQjS^EP5;iFIzZ]33
+!s100 YcZUZ_i53Uj77:lcLc?>N0
+R8
+32
+Z53 !s110 1602624795
+!i10b 1
+R39
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/decoder7seg.vhd|
+Z55 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/decoder7seg.vhd|
+!i113 1
+R13
+R14
+Abhv
+R3
+R4
+DEx4 work 11 decoder7seg 0 22 aa_CODQjS^EP5;iFIzZ]33
+l12
+L10
+VPHaTKP^3O];dZmbz?QWN11
+!s100 Fzb>cSU0=?J`PA<KU;7D80
+R8
+32
+R53
+!i10b 1
+R39
+R54
+R55
+!i113 1
+R13
+R14
+Egray1
+Z56 w1602292624
+R3
+R4
+R5
+Z57 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray1.vhd
+Z58 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray1.vhd
+l0
+L11
+VkG9BL<n^Ad`7[GaD9k;3g1
+!s100 CQL`Xdjma1ZQPcoOzEWf@1
+R8
+32
+R53
+!i10b 1
+Z59 !s108 1602624795.000000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray1.vhd|
+Z61 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray1.vhd|
+!i113 1
+R13
+R14
+Abhv
+R3
+R4
+Z62 DEx4 work 5 gray1 0 22 kG9BL<n^Ad`7[GaD9k;3g1
+l25
+L20
+V7O5FSZOgbMFXCU67V]fgQ3
+!s100 VXX^Qi[<Ah8=N@>de3gM53
+R8
+32
+R53
+!i10b 1
+R59
+R60
+R61
+!i113 1
+R13
+R14
+Egray1_tb
+Z63 w1602304750
+R3
+R4
+R5
+Z64 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray1_tb.vhd
+Z65 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray1_tb.vhd
+l0
+L7
+Va<=NSWWS[kICzcioe?UkA0
+!s100 >m^[NjA7R<VVVH<9nQD^L3
+R8
+32
+Z66 !s110 1602624797
+!i10b 1
+Z67 !s108 1602624797.000000
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray1_tb.vhd|
+Z69 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray1_tb.vhd|
+!i113 1
+R13
+R14
+Atb
+R62
+R3
+R4
+DEx4 work 8 gray1_tb 0 22 a<=NSWWS[kICzcioe?UkA0
+l16
+L10
+V=9G?gM?9id@?M4;lZzW941
+!s100 e8M^Mz_:eX]jjoK]E5GAl0
+R8
+32
+R66
+!i10b 1
+R67
+R68
+R69
+!i113 1
+R13
+R14
+Egray2
+Z70 w1602372335
+R3
+R4
+R5
+Z71 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray2.vhd
+Z72 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray2.vhd
+l0
+L11
+VKK[V>^PHQIQ`URfLYjMYH1
+!s100 b]<0;l1eKWLhE<oXlZBo^2
+R8
+32
+Z73 !s110 1602624800
+!i10b 1
+Z74 !s108 1602624799.000000
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray2.vhd|
+Z76 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray2.vhd|
+!i113 1
+R13
+R14
+Abhv
+R3
+R4
+Z77 DEx4 work 5 gray2 0 22 KK[V>^PHQIQ`URfLYjMYH1
+l24
+L19
+VDfCY_`0NEd82S6le8UDjh2
+!s100 `R>W52Vb6PQI2lL[hIce42
+R8
+32
+R73
+!i10b 1
+R74
+R75
+R76
+!i113 1
+R13
+R14
+Egray2_tb
+Z78 w1602372889
+R3
+R4
+R5
+Z79 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray2_tb.vhd
+Z80 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray2_tb.vhd
+l0
+L7
+VgiAhVT9za[fS@bdHlg_761
+!s100 Xd^P?W]KWC:8ai4`1OEVS0
+R8
+32
+Z81 !s110 1602624812
+!i10b 1
+Z82 !s108 1602624811.000000
+Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray2_tb.vhd|
+Z84 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/gray2_tb.vhd|
+!i113 1
+R13
+R14
+Atb
+R77
+R3
+R4
+Z85 DEx4 work 8 gray2_tb 0 22 giAhVT9za[fS@bdHlg_761
+l16
+L10
+Z86 V97zeMAK6ln^?[?:>icCWA0
+Z87 !s100 e>:jWbbVU3[<126:3Q?M52
+R8
+32
+R81
+!i10b 1
+R82
+R83
+R84
+!i113 1
+R13
+R14
+Etop_level
+Z88 w1602379893
+Z89 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z90 DPx5 maxii 15 maxii_atom_pack 0 22 0AkPE6`BcAMTVDnhGOIT:1
+Z91 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z92 DPx5 maxii 16 maxii_components 0 22 eRFH09VjTO<GE<HQHm1Nk1
+R3
+R4
+R5
+Z93 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/simulation/modelsim/FMS.vho
+Z94 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/simulation/modelsim/FMS.vho
+l0
+L34
+VMTG=mc=73C8>T6S8EAMXK0
+!s100 XTNiOa4j@Z7goPGYRAjZ^0
+R8
+32
+Z95 !s110 1602624796
+!i10b 1
+Z96 !s108 1602624796.000000
+Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/simulation/modelsim/FMS.vho|
+Z98 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/simulation/modelsim/FMS.vho|
+!i113 1
+R13
+R14
+Astructure
+R89
+R90
+R91
+R92
+R3
+R4
+DEx4 work 9 top_level 0 22 MTG=mc=73C8>T6S8EAMXK0
+l250
+L58
+VX;1AaaGDkg[zD:z0z@[MQ2
+!s100 F?:H5oBY<ckhlf<QMCQ6h0
+R8
+32
+R95
+!i10b 1
+R96
+R97
+R98
+!i113 1
+R13
+R14
+Astr
+R3
+R4
+DEx4 work 9 top_level 0 22 eoZDF?3L=z3zMe88o]IG20
+l81
+L39
+Vc4hMmOP558mEz3ElmA8Ci1
+!s100 ARDEQ3iF6Q^AE5K2TRjGT2
+R8
+32
+!s110 1602624791
+!i10b 1
+!s108 1602624790.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/top_level.vhd|
+!s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/top_level.vhd|
+!i113 1
+R13
+R14
+FC:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/top_level.vhd
+w1602265107
+8C:/Users/Johnny Li/Desktop/QuartusDD/Lab4/FSM/top_level.vhd

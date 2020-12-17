@@ -1,0 +1,56 @@
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=32;
+DEPTH=32;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	00  :   10011010111000111101101011100000;
+	01  :   01011101000101100101000101001111;
+	02  :   10001110101011011000111010101000;
+	03  :   10010100111010000100001100001000;
+	04  :   01101101100101100110011001111011;
+	05  :   10101101110001011110001100011101;
+	06  :   01100111001011011100000101001100;
+	07  :   01101001011100101101001100110001;
+	08  :   01010111100101100001110100100110;
+	09  :   11001010101010110100101100000110;
+	0A  :   11000010001001111111110000101010;
+	0B  :   11111011110000110011101001011101;
+	0C  :   10111111001000110100001100000101;
+	0D  :   01010011100111010001110110001111;
+	0E  :   00101010001001000111101101011010;
+	0F  :   01011101100100111001001101111000;
+	10  :   10011010111000111101101011100000;
+	11  :   01011101000101100101000101001111;
+	12  :   10001110101011011000111010101000;
+	13  :   10010100111010000100001100001000;
+	14  :   01101101100101100110011001111011;
+	15  :   10101101110001011110001100011101;
+	16  :   01100111001011011100000101001100;
+	17  :   01101001011100101101001100110001;
+	18  :   01010111100101100001110100100110;
+	19  :   11001010101010110100101100000110;
+	1A  :   11000010001001111111110000101010;
+	1B  :   11111011110000110011101001011101;
+	1C  :   10111111001000110100001100000101;
+	1D  :   01010011100111010001110110001111;
+	1E  :   00101010001001000111101101011010;
+	1F  :   01011101100100111001001101111000;
+END;

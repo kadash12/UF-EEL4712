@@ -1,0 +1,33 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clk_gen:U_CLK_GEN|clk_div:U_CD|temp'
+Slack : -7.873
+TNS   : -230.491
+
+Type  : Setup 'clk50MHz'
+Slack : -7.200
+TNS   : -94.892
+
+Type  : Hold 'clk50MHz'
+Slack : 2.064
+TNS   : 0.000
+
+Type  : Hold 'clk_gen:U_CLK_GEN|clk_div:U_CD|temp'
+Slack : 2.839
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk50MHz'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'clk_gen:U_CLK_GEN|clk_div:U_CD|temp'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk_gen:U_CLK_GEN|temp'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

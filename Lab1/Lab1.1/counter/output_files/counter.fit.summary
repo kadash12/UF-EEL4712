@@ -1,0 +1,11 @@
+Fitter Status : Successful - Thu Sep 10 20:12:22 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : counter
+Top-level Entity Name : counter
+Family : MAX II
+Device : EPM2210F324C5
+Timing Models : Final
+Total logic elements : 33 / 2,210 ( 1 % )
+Total pins : 21 / 272 ( 8 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

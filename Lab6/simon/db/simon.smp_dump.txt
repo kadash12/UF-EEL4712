@@ -1,0 +1,11 @@
+
+State Machine - |top_level|simon_top:U_SIMON_top|controller:U_CONTL|state
+Name state.state5 state.state4 state.stated state.statec state.state3 state.state2 state.state1 state.state0 
+state.state0 0 0 0 0 0 0 0 0 
+state.state1 0 0 0 0 0 0 1 1 
+state.state2 0 0 0 0 0 1 0 1 
+state.state3 0 0 0 0 1 0 0 1 
+state.statec 0 0 0 1 0 0 0 1 
+state.stated 0 0 1 0 0 0 0 1 
+state.state4 0 1 0 0 0 0 0 1 
+state.state5 1 0 0 0 0 0 0 1 

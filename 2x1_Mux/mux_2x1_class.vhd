@@ -1,0 +1,71 @@
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity mux_2x1 is
+  port(
+		in1, in2, sel : in std_logic;
+		--in3 : in std_lgic_vector (20 downto 0);
+		output : out std_logic
+    );
+end ;
+
+--mode can be in, out, inout, buffer
+
+architecture WITH_SELECT of mux_2x1 is
+
+--declaration region
+begin
+--functional region
+with sel select
+output <= in1 when '0',
+				in2 when '1',
+				'X' when others;
+
+end WITH_SELECT;
+
+architecture WHEN_ELSE of mux_2x1 is
+--signal temp : std_logic;
+begin
+
+output <= in1 when sel='0' else
+				in2 when sel='1' else
+				'X';
+--temp <= in1 and in2;
+				
+end WHEN_ELSE;
+
+architecture IF_STATEMENT of mux_2x1 is
+begin
+
+  process(sel, in1, in2)
+  begin
+	if sel = '0' then
+		output <= in1;
+	else
+		output <= in2;
+    end if;
+  end process;
+end IF_STATEMENT;
+
+architecture CASE_STATEMENT of mux_2x1 is
+begin
+
+
+
+  process(sel, in1, in2)
+  begin
+
+		case sel is
+		when '0' => 
+				output <= in1;
+		when '1' =>
+				output <= 'X';
+		when others =>
+				output <= in2;
+	end case;
+  end process;
+end CASE_STATEMENT;
+
+

@@ -1,0 +1,205 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Johnny Li/Desktop/QuartusDD/Lab1/Lab1.1
+Eadder
+Z0 w1599851834
+Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z2 DPx5 maxii 15 maxii_atom_pack 0 22 0AkPE6`BcAMTVDnhGOIT:1
+Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z4 DPx5 maxii 16 maxii_components 0 22 eRFH09VjTO<GE<HQHm1Nk1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 dC:/Users/Johnny Li/Desktop/QuartusDD/Lab1/Lab1.2
+Z8 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/Lab1.2/rca/simulation/modelsim/rca.vho
+Z9 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab1/Lab1.2/rca/simulation/modelsim/rca.vho
+l0
+L34
+VUY?U[E>KzT^?G=b1fT:JJ1
+!s100 ?`Ig[[cWoenNAkEO=`mT92
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1599852139
+!i10b 1
+Z12 !s108 1599852139.000000
+Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/Lab1.2/rca/simulation/modelsim/rca.vho|
+Z14 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/Lab1.2/rca/simulation/modelsim/rca.vho|
+!i113 1
+Z15 o-work work -2002 -explicit
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+Z17 DEx4 work 5 adder 0 22 UY?U[E>KzT^?G=b1fT:JJ1
+l78
+L47
+Z18 V>lzA0L1JgQ_KDgN8_E3;j3
+Z19 !s100 5aX0g[UA8<bjfB8XB[1ZT3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astr
+R5
+R6
+DEx4 work 5 adder 0 22 Nn=@=8Bj_SnGS:N9WNKhd3
+l33
+L22
+VUGGnZ_HPPjG5dQX7dim4W2
+!s100 RG7^MbA5MiLL3[^J_W@jR0
+R10
+32
+Z20 !s110 1599852138
+!i10b 1
+Z21 !s108 1599852138.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/Lab1.2/rca/adder.vhd|
+!s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/Lab1.2/rca/adder.vhd|
+!i113 1
+R15
+R16
+FC:/Users/Johnny Li/Desktop/QuartusDD/Lab1/Lab1.2/rca/adder.vhd
+w1599851440
+8C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/Lab1.2/rca/adder.vhd
+Eadder_tb
+Z22 w1567212899
+Z23 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R5
+R6
+R7
+Z24 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/VHDL Files/adder_tb.vhd
+Z25 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab1/VHDL Files/adder_tb.vhd
+l0
+L8
+VlNzV;BRTo_:<@RIU:K?>L1
+!s100 PDNPhQNIQ4JdmiNVWd5YI3
+R10
+32
+R20
+!i10b 1
+R21
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/VHDL Files/adder_tb.vhd|
+Z27 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/VHDL Files/adder_tb.vhd|
+!i113 1
+R15
+R16
+Atb
+R1
+R2
+R3
+R4
+R17
+R23
+R5
+R6
+DEx4 work 8 adder_tb 0 22 lNzV;BRTo_:<@RIU:K?>L1
+l16
+L11
+V3<5OI;F8l[IF3eJQXNbAL0
+!s100 UXiSGCG^NcJKaJ;M6f6UX1
+R10
+32
+R20
+!i10b 1
+R21
+R26
+R27
+!i113 1
+R15
+R16
+Efa
+Z28 w1599849010
+R5
+R6
+R7
+Z29 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/VHDL Files/fa.vhd
+Z30 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab1/VHDL Files/fa.vhd
+l0
+L10
+VOkFc8h<N0HTY;znlZMJC:0
+!s100 nS:6fBWV@;Wo0DKmSn<FN2
+R10
+32
+R20
+!i10b 1
+Z31 !s108 1599852137.000000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/VHDL Files/fa.vhd|
+Z33 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/VHDL Files/fa.vhd|
+!i113 1
+R15
+R16
+Abhv
+R5
+R6
+Z34 DEx4 work 2 fa 0 22 OkFc8h<N0HTY;znlZMJC:0
+l22
+L21
+VcznSXj4bfWKDREBeKi45F1
+!s100 i]k>SR:cRX0[GYi]EhF@@1
+R10
+32
+R20
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R15
+R16
+Efa_tb
+Z35 w1567169783
+R23
+R5
+R6
+R7
+Z36 8C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/VHDL Files/fa_tb.vhd
+Z37 FC:/Users/Johnny Li/Desktop/QuartusDD/Lab1/VHDL Files/fa_tb.vhd
+l0
+L8
+VI_3P48INb@BMb3ij>;@EP1
+!s100 3_abXP8hnMOG:JhJ230mZ2
+R10
+32
+Z38 !s110 1599852137
+!i10b 1
+R31
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/VHDL Files/fa_tb.vhd|
+Z40 !s107 C:/Users/Johnny Li/Desktop/QuartusDD/Lab1/VHDL Files/fa_tb.vhd|
+!i113 1
+R15
+R16
+Atb
+R34
+R23
+R5
+R6
+DEx4 work 5 fa_tb 0 22 I_3P48INb@BMb3ij>;@EP1
+l15
+L11
+V;71bgaGFnXX6ZEYW?:eG81
+!s100 FO=:8hk>d::o5CB`_T0@f0
+R10
+32
+R38
+!i10b 1
+R31
+R39
+R40
+!i113 1
+R15
+R16

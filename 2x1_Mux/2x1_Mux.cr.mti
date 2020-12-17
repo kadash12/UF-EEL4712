@@ -1,0 +1,36 @@
+{C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_2x1_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_2x1_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mux_2x1_tb
+-- Compiling architecture TB of mux_2x1_tb
+-- Loading entity mux_2x1
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_2x1_class.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_2x1_class.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux_2x1
+-- Compiling architecture WITH_SELECT of mux_2x1
+-- Compiling architecture WHEN_ELSE of mux_2x1
+-- Loading entity mux_2x1
+-- Compiling architecture IF_STATEMENT of mux_2x1
+-- Loading entity mux_2x1
+-- Compiling architecture CASE_STATEMENT of mux_2x1
+-- Loading entity mux_2x1
+
+} {} {}} {C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_4x1_class.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Johnny Li/Desktop/QuartusDD/2x1_Mux/mux_4x1_class.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux_4x1
+-- Compiling architecture STR of mux_4x1
+-- Compiling architecture STR2 of mux_4x1
+-- Loading entity mux_4x1
+-- Loading entity mux_2x1
+
+} {} {}}

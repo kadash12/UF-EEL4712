@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Tue Oct 06 18:55:09 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : CLA
+Top-level Entity Name : adder_top
+Family : MAX II
+Total logic elements : 16
+Total pins : 26
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
